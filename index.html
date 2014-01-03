@@ -1,0 +1,41 @@
+<html>
+<head>
+<link rel="prefetch" href="./preload.gif" />
+</head>
+<body>
+	
+	<img src="./preload.gif" alt="" original-data="./original.gif" class="lazyJ" /><br /><br />
+	<img src="./preload.gif" alt="" original-data="./original.gif" class="lazyJ" /><br /><br />
+	<img src="./preload.gif" alt="" original-data="./original.gif" class="lazyJ" /><br /><br />
+	<img src="./preload.gif" alt="" original-data="./original.gif" class="lazyJ" /><br /><br />
+	<img src="./preload.gif" alt="" original-data="./original.gif" class="lazyJ" /><br /><br />
+	<img src="./preload.gif" alt="" original-data="./original.gif" class="lazyJ" /><br /><br />
+	<img src="./preload.gif" alt="" original-data="./original.gif" class="lazyJ" /><br /><br />
+	<img src="./preload.gif" alt="" original-data="./original.gif" class="lazyJ" /><br /><br />
+	<img src="./preload.gif" alt="" original-data="./original.gif" class="lazyJ" /><br /><br />
+	<img src="./preload.gif" alt="" original-data="./original.gif" class="lazyJ" /><br /><br />
+	
+	
+	<script src="./lazyLoadJ.js"></script>	
+	<script>
+		var model = new lazyLoadJ("lazyJ", 50);
+
+		// @ controller
+		window.onload = function () {
+			model.initiate();
+			model.doLazyLoad(model.findImageAvaliable());
+		};
+		window.onscroll = commonProcess;
+		window.onresize =commonProcess;
+		window.onmousewheel = function () {
+			model.checkMouseWheelSpeed(50);
+		};
+		
+		function commonProcess () {
+			model.availableViewRange();
+			model.doLazyLoad(model.findImageAvaliable());
+		}
+	</script>
+
+</body>
+</html>
