@@ -4,7 +4,7 @@
  * https://page.kakao.com/store/kakaopage
  * Copyright 2014 'J' in Podotree, Inc.
  * Email : jj81.corp@gmail.com
- * 
+ * Released under the MIT license
  * Date: 2014-01-03
  * version : 2.0
  */
